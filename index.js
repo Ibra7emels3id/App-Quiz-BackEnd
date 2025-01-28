@@ -14,7 +14,7 @@ Connectdb()
 
 // server configuration settings for express
 app.use(cors({
-    origin: [`${process.env.SITE_URL}`],
+    origin: [`${process.env.SITE_URL}`,`${process.env.SITE_URL_1}`,`${process.env.SITE_URL_2}`,`${process.env.SITE_URL_3}`],
     optionsSuccessStatus: 200,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept', 'X-Custom-Header'],
