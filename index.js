@@ -6,7 +6,7 @@ const cors = require('cors');
 const UserRouterCLient = require('./routes/UserRouter');
 const QuestionRouter = require('./routes/QuestionRouter');
 const ScoreRouterCLient = require('./routes/ScoreRouter');
-const port = process.env.URL || 9000
+const port = 9000
 
 
 // Connected to mongodb server
@@ -14,7 +14,7 @@ Connectdb()
 
 // server configuration settings for express
 app.use(cors({
-    origin: ['https://app-quiz-admin.vercel.app','http://localhost:3000', 'http://localhost:3001'],
+    origin: [`${process.env.SITE_URL}`],
     optionsSuccessStatus: 200,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept', 'X-Custom-Header'],
