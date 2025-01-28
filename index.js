@@ -14,7 +14,7 @@ Connectdb()
 
 // server configuration settings for express
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:3001'],
+    origin: ['https://app-quiz-admin.vercel.app','http://localhost:3000', 'http://localhost:3001'],
     optionsSuccessStatus: 200,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept', 'X-Custom-Header'],
